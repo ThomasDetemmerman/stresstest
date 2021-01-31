@@ -1,0 +1,5 @@
+{
+    "filters": [
+    { "type": "regex", "expression": "LCguKiksIHF1aXM=" }
+    ]
+}
