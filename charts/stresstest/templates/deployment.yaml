@@ -42,18 +42,6 @@ spec:
           #   value:  {{ .Values.env.url | quote }}
           # - name: USERS
           #   value: {{ .Values.env.users | quote }}
-          ports:
-            - name: http
-              containerPort: 80
-              protocol: TCP
-          livenessProbe:
-            httpGet:
-              path: /
-              port: http
-          readinessProbe:
-            httpGet:
-              path: /
-              port: http
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
       {{- with .Values.nodeSelector }}
